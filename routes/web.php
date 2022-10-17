@@ -14,33 +14,41 @@ use App\Http\Controllers\CoffeeController;
 |
 */
 
+// Index
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/addCoffee', function () {
-    return view('addCoffee');
-});
-Route::get(
-    '/editCoffee/{id}', 
-    [CoffeeController::class, 'get_coffee_by_id']
-);
 
-Route::get(
-    '/deleteCoffee/{id}', 
-    [CoffeeController::class, 'delete_coffee']
-);
-
+// Home
 Route::get(
     '/home', 
     [CoffeeController::class, 'get_all_coffees']
 );
+
+// Add Coffee
+Route::get('/addCoffee', function () {
+    return view('addCoffee');
+});
 
 Route::patch(
     '/addCoffee/store', 
     [CoffeeController::class, 'store_coffee']
 );
 
+// Edit Coffee
+Route::get(
+    '/editCoffee/{id}', 
+    [CoffeeController::class, 'get_coffee_by_id']
+);
+
 Route::patch(
     '/editCoffee/update/{id}', 
     [CoffeeController::class, 'update_coffee']
 );
+
+// Delete Coffee
+Route::get(
+    '/deleteCoffee/{id}', 
+    [CoffeeController::class, 'delete_coffee']
+);
+
