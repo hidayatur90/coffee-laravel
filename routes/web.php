@@ -28,3 +28,8 @@ Route::get(
     '/home', 
     [CoffeeController::class, 'get_all_coffees']
 );
+
+Route::patch(
+    '/addCoffee/store', 
+    [CoffeeController::class, 'store_coffee']
+);

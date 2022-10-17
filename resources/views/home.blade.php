@@ -2,7 +2,7 @@
 @section('content')
 <title>Home</title>
 <div class="container mt-4">
-    <div class="header text-center">
+    <div class="header text-center fst-italic">
         <h3>Stock Coffee</h3>
         <p>20 Oktober 2022</p>
     </div>

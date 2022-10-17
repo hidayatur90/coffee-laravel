@@ -17,11 +17,24 @@ class CoffeeController extends Controller
         return view('home', ['coffees' => $coffees]);
     }
 
-    public function store_coffee()
+    public function store_coffee(Request $request)
     {
-        
+        $this->validate($request,[
+    		'nameCoffee' => 'required|string',
+    		'jumlahStok' => 'integer',
+    		'jumlahStok' => 'integer']
+        );
+
+        Coffee::create([
+            'name' => $request->nameCoffee,
+            'unit_stock' => $request->stock,
+            'unit_price' => $request->price
+        ]);
+
+        return redirect('/home');
+
     }
-    
+
     public function get_coffee_by_id()
     {
 
