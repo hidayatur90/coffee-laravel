@@ -10,7 +10,7 @@
             <form action="/addCoffee/store" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PATCH') }}
-                {{-- Nama Karyawan --}}
+                {{-- Name of Coffee --}}
                 <div class="row mb-3">
                     <label for="nameCoffee" class="col-form-label col-sm-4 col-md-3 col-xl-2"><strong>Name</strong></label>
                     <div class="col-sm-8 col-md-9 col-xl-10">
@@ -25,7 +25,7 @@
                         @endif
                     </div>
                 </div>
-                {{-- Stok --}}
+                {{-- Units in Stock --}}
                 <div class="row mb-3">
                     <label for="stock" class="col-form-label col-sm-4 col-md-3 col-xl-2"><strong>Stok
                             (gr)</strong></label>
@@ -41,7 +41,7 @@
                         @endif
                     </div>
                 </div>
-                {{-- Harga Per100Gram --}}
+                {{-- Units in Price --}}
                 <div class="row mb-3">
                     <label for="price" class="col-form-label col-sm-4 col-md-3 col-xl-2"><strong>Harga
                             (Rp)</strong></label>

@@ -20,9 +20,15 @@ Route::get('/', function () {
 Route::get('/addCoffee', function () {
     return view('addCoffee');
 });
-Route::get('/editCoffee', function () {
-    return view('editCoffee');
-});
+Route::get(
+    '/editCoffee/{id}', 
+    [CoffeeController::class, 'get_coffee_by_id']
+);
+
+Route::get(
+    '/deleteCoffee/{id}', 
+    [CoffeeController::class, 'delete_coffee']
+);
 
 Route::get(
     '/home', 
@@ -32,4 +38,9 @@ Route::get(
 Route::patch(
     '/addCoffee/store', 
     [CoffeeController::class, 'store_coffee']
+);
+
+Route::patch(
+    '/editCoffee/update/{id}', 
+    [CoffeeController::class, 'update_coffee']
 );

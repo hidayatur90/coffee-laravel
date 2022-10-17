@@ -29,8 +29,8 @@
                 <td>{{ $coffee->unit_stock }}</td>
                 <td>{{ $coffee->unit_price }}</td>
                 <td>
-                    <a class="btn btn-warning" href="editCoffee">Edit</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
+                    <a class="btn btn-warning" href="editCoffee/{{ $coffee->id }}">Edit</a>
+                    <a class="btn btn-danger" href="deleteCoffee/{{ $coffee->id }}">Delete</a>
                 </td>
             </tr>
             @endforeach
