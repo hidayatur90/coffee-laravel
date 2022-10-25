@@ -32,7 +32,7 @@ class CoffeeController extends Controller
 
         return redirect('/home');
 
-    }
+    }   
 
     // Read spesifically data
     public function get_coffee_by_id($id)
